@@ -221,3 +221,5 @@ __marimo__/
 # USER ADDED
 *.txt
 *.h5
+
+uv.lock

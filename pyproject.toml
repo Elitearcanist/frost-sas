@@ -1,0 +1,21 @@
+[project]
+name = "frost-sas"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "EliteArcanist", email = "andrew@jmcdfam.net" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.16.0",
+    "numpy>=2.5.3",
+    "ruff>=0.16.8",
+]
+
+[project.scripts]
+frost-sas = "frost_sas:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
