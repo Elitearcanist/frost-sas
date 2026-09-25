@@ -11,6 +11,10 @@
         "editor.formatOnSaveMode": "file",
         "editor.codeActionsOnSave": {
             "source.organizeImports.ruff": "explicit"
-        }
-    }
+        },
+    },
+    "python.analysis.extraPaths": [
+        "./src/frost_sas",
+        "./src/frost_sas/data_importing"
+    ],
 }

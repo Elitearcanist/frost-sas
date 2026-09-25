@@ -4,7 +4,7 @@ import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
-from read_beamformed import readBeamFile
+from data_importing.read_beamformed import readBeamFile
 
 if len(sys.argv) == 1:
     # print('Must specify beamformed filename on command line')
