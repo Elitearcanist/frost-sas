@@ -35,7 +35,7 @@ data = np.flipud(data)
 
 # ax.imshow(np.log10(data), cmap = 'gray')#, extent=[-1,1,-10,10])
 ax.imshow(
-    data, extent=[x[0], x[-1], y[0], y[-1]], cmap="gray"
+    data, extent=[x[0], x[-1], y[0], y[-1]], cmap="BuPu"
 )  # , extent=[-1,1,-10,10])
 print(x[-1])
 plt.title("Beamformed")

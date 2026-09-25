@@ -2,7 +2,7 @@ import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
-from read_data_stave_hdf5 import read_stave_data_hdf5
+from read_stave import read_stave_data_hdf5
 
 
 # From https://moonbooks.org/Articles/How-to-change-imshow-aspect-ratio-in-matplotlib-/

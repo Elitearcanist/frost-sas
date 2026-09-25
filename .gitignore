@@ -219,7 +219,7 @@ __marimo__/
 
 
 # USER ADDED
-*.txt
+mastodon_config/*.txt
 *.h5
 
 uv.lock
