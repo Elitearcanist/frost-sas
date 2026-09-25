@@ -150,7 +150,7 @@ def read_stave_data_hdf5(filename: Path) -> SimpleNamespace:
                 "Real data in HDF5 has not be tested",
                 "Invalid data format key",
             ]:
-                raise e
+                raise
             # Older formats do not have the data_format dataset, so assume complex.
             if not hasattr(stave, "signal"):
                 stave.signal = SimpleNamespace()
@@ -208,4 +208,5 @@ def main():
     read_stave_data_hdf5(dataPath)
 
 
-main()
+if __name__ == "__main__":
+    main()
