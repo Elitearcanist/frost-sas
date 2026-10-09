@@ -1,6 +1,11 @@
 # frost-sas
 
+## TODO
+
+- Look at [Numba](https://numba.pydata.org/) could speed up main math functions.
+
 ## Reminders
+
 - Use logging for better debugging and data recording
 - Makes tests using Pytest
 - Measure performance with [Pyperf](https://pypi.org/project/pyperf/) (or timeit)
