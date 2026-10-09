@@ -12,7 +12,7 @@ def forceAspect(ax, aspect):
     ax.set_aspect(abs((extent[1] - extent[0]) / (extent[3] - extent[2])) / aspect)
 
 
-def plotHdf5():
+def plotHdf5(match_filter=False):
     if len(sys.argv) == 1:
         # print('Must specify stave data .json file on command line')
         # exit()
@@ -33,6 +33,8 @@ def plotHdf5():
     # data = np.array(data)
 
     data = read_stave_data_hdf5(filename)
+
+    # print(data.signal_key)
 
     #
     # Plot magnitude

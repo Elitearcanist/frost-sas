@@ -71,6 +71,13 @@ def read_stave_data_hdf5(filename: Path) -> SimpleNamespace:
         stave.proj_height = f["/sonars/projector/height"][()]
         stave.recv_height = f["/sonars/receiver/height"][()]
 
+        try:
+            stave.signal_key = f["/signal/signal_key"][()]
+        except KeyError:
+            logger.info(
+                "Unable to pull signal_key data, tx data is likely stored in a seperate txt file."
+            )
+
         # These don't exist in older HDF5 files
         stave.proj = SimpleNamespace()
         stave.recv = SimpleNamespace()
