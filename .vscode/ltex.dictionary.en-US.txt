@@ -1,0 +1,3 @@
+colorscale
+matplotlib
+Pytest
