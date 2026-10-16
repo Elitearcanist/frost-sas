@@ -13,8 +13,6 @@ dependencies = [
     "numpy>=2.5.3",
     "pip>=26.2.1",
     "pyperf>=2.10.0",
-    "pytest>=9.1.1",
-    "ruff>=0.16.8",
     "scipy>=1.18.1",
 ]
 
@@ -26,4 +24,9 @@ requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = ["ipykernel>=7.4.0", "prek>=0.5.5"]
+dev = [
+    "ipykernel>=7.4.0",
+    "prek>=0.5.5",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
