@@ -12,8 +12,8 @@ def forceAspect(ax, aspect):
     ax.set_aspect(abs((extent[1] - extent[0]) / (extent[3] - extent[2])) / aspect)
 
 
-def plotHdf5(match_filter=False):
-    if len(sys.argv) == 1:
+def plotHdf5(data=None, match_filter=False):
+    if len(sys.argv) == 1 and data is None:
         # print('Must specify stave data .json file on command line')
         # exit()
         import tkinter as tk
@@ -31,8 +31,8 @@ def plotHdf5(match_filter=False):
     #
     # data = stave['data']
     # data = np.array(data)
-
-    data = read_stave_data_hdf5(filename)
+    if data is None:
+        data = read_stave_data_hdf5(filename)
 
     # print(data.signal_key)
 

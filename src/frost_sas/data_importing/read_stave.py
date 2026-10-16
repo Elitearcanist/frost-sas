@@ -6,6 +6,11 @@ import h5py
 import numpy as np
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(
+    format="%(asctime)s:%(name)s:%(levelname)s:%(message)s",
+    # print to both a file and to console
+    handlers=[logging.FileHandler("read_stave.log", "w"), logging.StreamHandler()],
+)
 
 
 def read_stave_data_hdf5(filename: Path) -> SimpleNamespace:
@@ -70,13 +75,6 @@ def read_stave_data_hdf5(filename: Path) -> SimpleNamespace:
         # These two are deprecated, and stave.proj.* should be used instead
         stave.proj_height = f["/sonars/projector/height"][()]
         stave.recv_height = f["/sonars/receiver/height"][()]
-
-        try:
-            stave.signal_key = f["/signal/signal_key"][()]
-        except KeyError:
-            logger.info(
-                "Unable to pull signal_key data, tx data is likely stored in a seperate txt file."
-            )
 
         # These don't exist in older HDF5 files
         stave.proj = SimpleNamespace()
@@ -209,8 +207,9 @@ def read_stave_data_hdf5(filename: Path) -> SimpleNamespace:
 
 
 def main():
+    logger.setLevel(logging.DEBUG)
 
-    dataPath = Path.cwd() / "mastodon_config/StaveData.h5"
+    dataPath = Path.cwd() / "mastodon_config/StaveData.hdf5"
 
     read_stave_data_hdf5(dataPath)
 

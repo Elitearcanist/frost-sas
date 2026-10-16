@@ -221,5 +221,6 @@ __marimo__/
 # USER ADDED
 mastodon_config/*.txt
 *.h5
+*.hdf5
 
 uv.lock
