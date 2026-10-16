@@ -11,6 +11,6 @@
 - Measure performance with [Pyperf](https://pypi.org/project/pyperf/) (or timeit)
 - Progress bars with [tqdm](https://tqdm.github.io/)
 - [Dask](https://docs.dask.org/en/stable/) for computing large datasets
-- [pre-commit](https://pre-commit.com/) for auto formatting on commit
+- [prek](https://github.com/j178/prek) for auto formatting on commit (improved version of pre-commit)
 
 SAS imaging might use the `copper` matplotlib colorscale to make their images.

@@ -3,17 +3,15 @@ name = "frost-sas"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "EliteArcanist", email = "andrew@jmcdfam.net" }
-]
+authors = [{ name = "EliteArcanist", email = "andrew@jmcdfam.net" }]
 requires-python = ">=3.12"
+
 dependencies = [
     "h5py>=3.16.0",
     "matplotlib>=3.11.2",
     "numba>=0.68.0",
     "numpy>=2.5.3",
     "pip>=26.2.1",
-    "pre-commit>=4.6.2",
     "pyperf>=2.10.0",
     "pytest>=9.1.1",
     "ruff>=0.16.8",
@@ -28,6 +26,4 @@ requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = [
-    "ipykernel>=7.4.0",
-]
+dev = ["ipykernel>=7.4.0", "prek>=0.5.5"]
