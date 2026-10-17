@@ -40,3 +40,25 @@ def match_filter_numba(
         matched_data[i, :] = full[start : start + rx_data.shape[1]]
 
     return matched_data
+
+
+def mag_to_db(
+    data: np.ndarray[tuple[Any, ...], np.dtype[np.complex128]],
+    power: bool = False,
+) -> np.ndarray:
+    if power:
+        return 10 * np.log10(np.abs(data))
+    else:
+        return 20 * np.log10(np.abs(data))
+
+
+# In testing this performed the exact same as the plain numpy version
+@njit(parallel=True)
+def mag_to_db_numba(
+    data: np.ndarray[tuple[Any, ...], np.dtype[np.complex128]],
+    power: bool = False,
+) -> np.ndarray:
+    if power:
+        return 10 * np.log10(np.abs(data))
+    else:
+        return 20 * np.log10(np.abs(data))
